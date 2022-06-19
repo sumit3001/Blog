@@ -1,0 +1,19 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "A blog site in mern",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/youngmansumit/Blog.git"
+  },
+  "author": "Sumit Vishwakarma",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/youngmansumit/Blog/issues"
+  },
+  "homepage": "https://github.com/youngmansumit/Blog#readme"
+}
