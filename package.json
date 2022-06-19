@@ -4,7 +4,9 @@
   "description": "A blog site in mern",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon --exec ./node_modules/.bin/babel-node src/index.js",
+    "build": "babel src --out-dir dist",
+    "start": "node dist/index.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +17,22 @@
   "bugs": {
     "url": "https://github.com/youngmansumit/Blog/issues"
   },
-  "homepage": "https://github.com/youngmansumit/Blog#readme"
+  "homepage": "https://github.com/youngmansumit/Blog#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express-validator": "^6.14.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.3.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16",
+    "@babel/cli": "^7.16.0",
+    "@babel/core": "^7.16.0",
+    "@babel/node": "^7.16.0",
+    "@babel/plugin-transform-runtime": "^7.16.4",
+    "@babel/preset-env": "^7.16.4"
+  }
 }
