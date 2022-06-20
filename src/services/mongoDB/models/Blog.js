@@ -10,7 +10,7 @@ const BlogSchema = new mongoose.Schema(
       type: String,
       required: true
     },
-    blog: {
+    description: {
       type: String,
       required: true
     }
@@ -20,4 +20,4 @@ const BlogSchema = new mongoose.Schema(
   }
 );
 
-export const Blog = new mongoose.model("User", BlogSchema);
+export const Blog = new mongoose.model("Blog", BlogSchema);

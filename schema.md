@@ -10,7 +10,7 @@
 - # Blog
     - heading : String
     - image : String (url)
-    - blog : String
+    - description : String
 
 - # Category
     - name : String 
