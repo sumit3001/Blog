@@ -2,6 +2,7 @@ import express from 'express'
 import dotenv from 'dotenv'
 import { connectDB } from './services/mongoDB/connectDB'
 import userRoutes from './routes/user'
+import categoryRoutes from './routes/category'
 import cors from 'cors'
 dotenv.config('./env'); // dotenv.config() load .env in process.env
 
@@ -14,6 +15,7 @@ app.use(express.json());
 app.use(cors()); 
 // cors() is did preflight check for security 
 app.use('/user', userRoutes);
+app.use('/category', categoryRoutes);
 
 
 app.get('/', (req, res)=> {
