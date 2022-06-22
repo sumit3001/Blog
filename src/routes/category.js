@@ -1,6 +1,6 @@
 import express from "express";
 import { body, validationResult } from "express-validator";
-import { Category } from "../services/mongoDB/models/Category";
+import { Category } from "../services/mongoDB/schema";
 import { isAdmin } from "../services/middlewares/isAdmin";
 import { isAuthenticated } from "../services/middlewares/isAuthenticated";
 

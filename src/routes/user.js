@@ -1,7 +1,7 @@
 import express from "express";
 import { body, validationResult } from "express-validator";
 import bcryptjs from "bcryptjs";
-import { User } from "../services/mongoDB/models/User";
+import { User } from "../services/mongoDB/schema";
 import { signJWT } from "../utils/jwt";
 
 const router = express.Router();
