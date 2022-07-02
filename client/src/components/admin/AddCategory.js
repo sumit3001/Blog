@@ -7,11 +7,16 @@ import {
   Button,
 } from "@chakra-ui/react";
 import { useState } from "react";
+import {addCategory} from '../../redux/actions/category'
+import { useDispatch } from 'react-redux';
 
 const AddCategory = () => {
 
   const [name, setName] = useState();
   const [description, setDescription] = useState();
+  const dispatch = useDispatch();
+
+  const handelAdd = () => dispatch(addCategory(name, description));
 
   return (
     <Box m={4} w='50%'> 
@@ -22,9 +27,9 @@ const AddCategory = () => {
         <FormLabel>Category Description</FormLabel>
         <Input onChange={e=>setDescription(e.target.value)} type="text" />
       </FormControl>
-      <Button  marginTop={4} colorScheme='blue'>Submit</Button>
+      <Button onClick={handelAdd} marginTop={4} colorScheme='blue'>Submit</Button>
     </Box>
-  )
-}
+  );
+};
 
 export default AddCategory;

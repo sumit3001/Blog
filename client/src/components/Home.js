@@ -48,7 +48,7 @@ export const BlogAuthor = (props) => {
 const Home = () => {
   return (
     <Container maxW={'7xl'} p="12">
-      <Heading as="h1">Stories by Chakra Templates</Heading>
+      <Heading as="h1">Latest Story</Heading>
       <Box
         marginTop={{ base: '1', sm: '5' }}
         display="flex"

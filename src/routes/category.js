@@ -68,31 +68,27 @@ query: none
 description: route for get category
 */
 
-router.get(
-  "/all",
-  isAuthenticated,
-  isAdmin,
-  async (req, res) => {
-    try {
-      const categories = await Category.find({ });
-      return res.json({
-        data: {
-          categories,
-        },
-        success: true,
-        message: "Category fetched successfully",
-      });
-    } catch (error) {
-      console.log(error);
-      return res.json({
-        data: {
-          categories: null,
-        },
-        success: false,
-        message: error.message,
-      });
-    }
+router.get("/all", async (req, res) => {
+  try {
+    const categories = await Category.find({});
+    console.log(categories);
+    return res.json({
+      data: {
+        categories,
+      },
+      success: true,
+      message: "Category fetched successfully",
+    });
+  } catch (error) {
+    console.log(error);
+    return res.json({
+      data: {
+        categories: null,
+      },
+      success: false,
+      message: error.message,
+    });
   }
-);
+});
 
 export default router;
