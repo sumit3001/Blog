@@ -70,8 +70,6 @@ description: Route for fetching all blog
 
 router.get(
   "/all",
-  isAuthenticated,
-  isAdmin,
   async (req, res) => {
     try {
       const blogs = await Blog.find({ });
