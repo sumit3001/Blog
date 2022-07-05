@@ -21,7 +21,7 @@ app.use('/blog', blogRoutes);
 
 
 app.get('/', (req, res)=> {
-  res.send(`Server deployed on PORT ${PORT}`)
+  res.send(`Server deployed on server PORT ${PORT}`)
 })
 
 app.listen(PORT, ()=>{
