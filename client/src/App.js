@@ -21,7 +21,7 @@ function App() {
   useEffect(() => {
     dispatch(LoadUser());
     dispatch(getBlogs());
-  }, []);
+  }, [dispatch]);
 
   return (
     <>
