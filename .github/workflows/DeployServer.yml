@@ -1,25 +1,25 @@
 name: Deploy Server
 
 on: 
-  push:
+  push: 
     branches: 
       - master
     paths: 
-      - 'src/*'
-      - '.github/workflows/DeployServer.yml'
+      - "src/*"
+      - ".github/workflows/DeployServer.yml"
 
-jobs:
-  deploy: 
+jobs: 
+  deploy:
     runs-on: ubuntu-latest
     steps: 
       - name: test
-        run: echo 'hi from github workflow'
-      - name: test
-        run: echo 'hi from github workflow'
+        run: echo "hi from github workflow"
       - name: get repo
         uses: actions/checkout@v2
-        with: 
+        with:
           fetch-depth: 0
+      - name: test
+        run: echo "hi from github workflow"
       - name: add github username
         run: git config --global user.name "youngmansumit"
       - name: add github email
