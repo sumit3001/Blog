@@ -3,7 +3,7 @@ import toast from "react-hot-toast";
 
 export const LoginUser = (email, password) => async (dispatch) => {
   try {
-    const res = await axios.post("http://localhost:8080/user/signin", {
+    const res = await axios.post("https://pristine-hot-springs-70486.herokuapp.com/user/signin", {
       email,
       password,
     });
@@ -54,7 +54,7 @@ export const LoadUser = () => async (dispatch) => {
 export const SignupUser =
   (firstName, lastName, email, password) => async (dispatch) => {
     try {
-      const res = await axios.post("http://localhost:8080/user/signup", {
+      const res = await axios.post("https://pristine-hot-springs-70486.herokuapp.com/user/signup", {
         firstName,
         lastName,
         email,

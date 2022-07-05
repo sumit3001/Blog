@@ -4,7 +4,7 @@ import axios from "axios";
 export const addCategory = (name, description) => async (dispatch) => {
   try {
     const token = localStorage.getItem('token')
-    const res = await axios.post("http://localhost:8080/category/add", {
+    const res = await axios.post("https://pristine-hot-springs-70486.herokuapp.com/category/add", {
       name,
       description,
     },
@@ -40,7 +40,7 @@ export const addCategory = (name, description) => async (dispatch) => {
 
 export const getCategories = () => async (dispatch) => {
   try {
-    const res = await axios.get("http://localhost:8080/category/all");
+    const res = await axios.get("https://pristine-hot-springs-70486.herokuapp.com/category/all");
     const { data, message, success } = res.data;
 
     if (success) {

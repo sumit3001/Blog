@@ -4,7 +4,7 @@ import axios from "axios";
 export const addBlog = (heading, description, image) => async (dispatch) => {
   try {
     const token = localStorage.getItem('token')
-    const res = await axios.post("http://localhost:8080/blog/add", {
+    const res = await axios.post("https://pristine-hot-springs-70486.herokuapp.com/blog/add", {
       heading,
       description,
       image
@@ -41,7 +41,7 @@ export const addBlog = (heading, description, image) => async (dispatch) => {
 
 export const getBlogs = () => async (dispatch) => {
   try {
-    const res = await axios.get("http://localhost:8080/blog/all");
+    const res = await axios.get("https://pristine-hot-springs-70486.herokuapp.com/blog/all");
     const { data, message, success } = res.data;
 
     if (success) {
