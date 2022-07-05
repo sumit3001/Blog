@@ -14,6 +14,8 @@ jobs:
     steps: 
       - name: test
         run: echo 'hi from github workflow'
+      - name: test
+        run: echo 'hi from github workflow'
       - name: get repo
         uses: actions/checkout@v2
         with: 
