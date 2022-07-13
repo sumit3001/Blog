@@ -29,7 +29,7 @@ const BlogTable = () => {
         <Thead>
           <Tr>
             <Th>Heading</Th>
-            <Th>Description</Th>
+            {/* <Th>Description</Th> */}
             <Th>Action</Th>
           </Tr>
         </Thead>
@@ -39,7 +39,7 @@ const BlogTable = () => {
             : blogs.map(({ heading, description }) => (
                 <Tr>
                   <Td>{heading}</Td>
-                  <Td>{description}</Td>
+                  {/* <Td>{description}</Td> */}
                   <Td>
                     <Stack spacing={4} direction="row" align="center">
                       <Button colorScheme="teal" size="md">
