@@ -51,9 +51,9 @@ const Home = () => {
 
   const { blogs } = useSelector(state => state.blog);
 
-  const lastBlog = blogs[blogs.length-1];
-
+  
   const lastTree = blogs.slice(-3);
+  const lastBlog = lastTree[2];
 
   return (
     <Container maxW={'7xl'} p="12">
@@ -74,11 +74,11 @@ const Home = () => {
             zIndex="2"
             marginLeft={{ base: '0', sm: '5%' }}
             marginTop="5%">
-            <Link textDecoration="none" to={`/blogs/${lastBlog._id}`} as={lee} _hover={{ textDecoration: 'none' }}>
+            <Link textDecoration="none" to={`/blogs/${lastBlog && lastBlog._id}`} as={lee} _hover={{ textDecoration: 'none' }}>
               <Image
                 borderRadius="lg"
                 src={
-                  `${lastBlog.image}`
+                  `${lastBlog && lastBlog.image}`
                 }
                 alt="some good alt text"
                 objectFit="contain"
@@ -105,8 +105,8 @@ const Home = () => {
           marginTop={{ base: '3', sm: '0' }}>
           <BlogTags tags={['Engineering', 'Product']} />
           <Heading marginTop="1">
-            <Link textDecoration="none" to={`/blogs/${lastBlog._id}`} as={lee} _hover={{ textDecoration: 'none' }}>
-              {lastBlog.heading}
+            <Link textDecoration="none" to={`/blogs/${lastBlog && lastBlog._id}`} as={lee} _hover={{ textDecoration: 'none' }}>
+              {lastBlog && lastBlog.heading}
             </Link>
           </Heading>
           <Text
