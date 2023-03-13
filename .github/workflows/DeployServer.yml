@@ -21,7 +21,7 @@ jobs:
       - name: test
         run: echo "hi from github workflow"
       - name: add github username
-        run: git config --global user.name "youngmansumit"
+        run: git config --global user.name "sumit3001"
       - name: add github email
         run: git config --global user.email "svsumitvishwakarma@gmail.com"
       - name: add heroku remote

@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/youngmansumit/Blog.git"
+    "url": "git+https://github.com/sumit3001/Blog.git"
   },
   "author": "Sumit Vishwakarma",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/youngmansumit/Blog/issues"
+    "url": "https://github.com/sumit3001/Blog/issues"
   },
-  "homepage": "https://github.com/youngmansumit/Blog#readme",
+  "homepage": "https://github.com/sumit3001/Blog#readme",
   "dependencies": {
     "express": "^4.18.1",
     "bcryptjs": "^2.4.3",
